@@ -1,7 +1,5 @@
-[![](https://images.microbadger.com/badges/version/ymedlop/npm-cache-resource:8.svg)](https://microbadger.com/images/ymedlop/npm-cache-resource:8 "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/ymedlop/npm-cache-resource:8.svg)](https://microbadger.com/images/ymedlop/npm-cache-resource:8 "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/commit/ymedlop/npm-cache-resource:8.svg)](https://microbadger.com/images/ymedlop/npm-cache-resource:8 "Get your own commit badge on microbadger.com") [![](https://images.microbadger.com/badges/license/ymedlop/npm-cache-resource:8.svg)](https://microbadger.com/images/ymedlop/npm-cache-resource:8 "Get your own license badge on microbadger.com")
-[![](https://img.shields.io/docker/pulls/ymedlop/npm-cache-resource.svg)](https://img.shields.io/docker/pulls/ymedlop/npm-cache-resource.svg)
-
-
+[![Anchore Image Overview](https://anchore.io/service/badges/image/ff3248a908b44da88fb3f1db2e1927466cba0975ce68e4ecf4ce13aee153483a)](https://anchore.io/image/dockerhub/ff3248a908b44da88fb3f1db2e1927466cba0975ce68e4ecf4ce13aee153483a?repo=ymedlop%2Fnpm-cache-resource&tag=latest)		
+  
 npm-cache-resource
 ==================
 
@@ -28,7 +26,7 @@ resource_types:
 
   - name: npm-cache
     type: docker-image
-    source: {repository: ymedlop/npm-cache-resource, tag: latest}
+    source: {repository: ymedlop/npm-cache-resource, tag: "4"}
 ```
 
 
@@ -207,5 +205,3 @@ License
 -------
 
 See the [LICENSE file](LICENSE) for license text and copyright information.
-
-
