@@ -55,6 +55,14 @@ RUN mkdir -p /opt/resource/git && \
     rm -r /opt/resource/git/git-resource.zip /opt/resource/git/git-resource-master && \
     sed -i '/git lfs/s/^/echo /' /opt/resource/git/in
 
+# Update NPM to 5.7.1 to enable use of `npm ci`
+# See: https://github.com/npm/npm/issues/13306
+RUN cd $(npm root -g)/npm \
+  && npm install fs-extra \
+  && sed -i -e s/graceful-fs/fs-extra/ -e s/fs.rename/fs.move/ ./lib/utils/rename.js \
+  && cd / \
+  && npm install -g npm@5.7.1
+
 # install npm cache resource
 ADD assets/ /opt/resource/
 RUN mkdir /var/cache/git
