@@ -61,7 +61,9 @@ fi
 if [ "$YARN_SUPPORT" != "false" ]; then
     NODE_ENV=development && yarn install >&2
 else
-    NODE_ENV=development && npm install --quiet >&2
+#    NODE_ENV=development && npm install --quiet >&2
+# Use NPM CI for build server
+    NODE_ENV=development && npm ci --quiet >&2
 fi
 
 if [ "$BOWER_SUPPORT" != "false" ]; then
