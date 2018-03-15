@@ -46,6 +46,10 @@ RUN mkdir -p /opt/resource/git && \
     rm -r /opt/resource/git/git-resource.zip /opt/resource/git/git-resource-master && \
     sed -i '/git lfs/s/^/echo /' /opt/resource/git/in
 
+# Update NPM to be able to utilise `npm ci`
+RUN yarn global add npm \
+  && npm i npm@5.7.1
+
 # install npm cache resource
 ADD assets/ /opt/resource/
 RUN mkdir /var/cache/git
